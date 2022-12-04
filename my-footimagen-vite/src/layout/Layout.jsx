@@ -1,4 +1,4 @@
-import { Header, Content, Nav, Footer } from '../components';
+import { SectionTop, SectionCenter, Nav, SectionBottom } from '../components';
 import '../styles/global.css';
 
 const Layout = () => {
@@ -7,9 +7,9 @@ const Layout = () => {
         <>
             <main className='mode-dark'>
                 <Nav />
-                <Header />
-                <Content />
-                <Footer />
+                <SectionTop />
+                <SectionCenter />
+                <SectionBottom />
             </main>
         </>
     )

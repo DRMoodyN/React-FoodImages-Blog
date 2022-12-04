@@ -1,19 +1,26 @@
+import { useState } from "react"
 
 const Nav = () => {
 
-    return (
-        <section className="container-nav">
-            <figure className="nav-logo col" >
-                <img className="logo" src="../assets/Moody.jpeg" alt="" />
+    const [modeDark, setmodeDark] = useState(false);
 
+    const onClickMode = () => {
+        setmodeDark(!modeDark);
+    }
+
+    return (
+        <nav className="container-nav">
+            <figure className="nav-logo" >
+                <img className="logo" src="../assets/Moody.jpeg" alt="" />
+                <figcaption className="logo-name">MoodyCors</figcaption>
             </figure>
-            <p className="nav-title col">
+            <p className="nav-title">
 
             </p>
-            <button className="nav-btn-mode header-btn-hover">
-                Login
+            <button onClick={onClickMode} className="nav-btn-mode btn-hover">
+                {(!modeDark) ? "Mode Dark" : "Mode Light"}
             </button>
-        </section>
+        </nav>
     )
 }
 

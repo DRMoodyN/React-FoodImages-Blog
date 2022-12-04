@@ -23,6 +23,15 @@ main {
     justify-self: left;
     align-self: center;
     margin-left: -15px;
+    display: grid;
+    grid-template-columns: auto auto;
+    place-content: center;
+}
+
+.logo-name {
+    color: #333;
+    align-self: center;
+    font-size: 30px;
 }
 
 .logo {
@@ -52,42 +61,9 @@ main {
 }
 
 
-/*  */
-.container-header {
-    display: grid;
+/* Global --------------------------------------------------------------------------------------------*/
 
-    grid-template-columns: 2fr 3fr;
-    /* grid-template-columns: minmax(300px, 2fr); */
-    max-height: 400px;
-    grid-auto-rows: 400px;
-}
-
-.header-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.header-info {
-    align-self: center;
-}
-
-.header-info>h1 {
-    color: #333;
-    font-size: 3rem;
-    font-weight: bolder;
-    margin-bottom: 20px;
-}
-
-.header-info>p {
-    color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 24px;
-    text-align: justify;
-    margin-left: 9px;
-}
-
-.header-info>button {
+.btn {
     border: none;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -102,7 +78,7 @@ main {
     margin-left: 30px;
 }
 
-.header-btn-hover:hover {
+.btn-hover:hover {
     color: white;
     background: #fb8c00;
     font-weight: bolder;
@@ -110,15 +86,48 @@ main {
     transition-duration: 1s, 1s;
 }
 
-/**/
+/* Section Top -------------------------------------------------------------------------------------- */
+.section-top-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    /* grid-template-columns: minmax(300px, 2fr); */
+    max-height: 400px;
+    grid-auto-rows: 400px;
+}
 
-.container-content {
+.top-info {
+    align-self: center;
+}
+
+.top-info>h1 {
+    color: #333;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.top-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.top-info>p {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    text-align: justify;
+    margin-left: 9px;
+}
+
+/* Section Center ----------------------------------------------------------------------------------- */
+
+.section-center-grid {
     margin: 00px 0;
 }
 
-.container-h2 {
+.center-h2 {
     margin-top: 80px;
-    margin-left: 64px;
     color: #333;
     font-weight: bold;
     text-align: center;
@@ -126,7 +135,7 @@ main {
     font-size: 2rem;
 }
 
-.content-grid {
+.center-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
     grid-auto-rows: 1fr;
@@ -134,38 +143,37 @@ main {
     justify-content: center;
 }
 
-.content-img-item-1 {
+.center-img-item-1 {
     grid-area: 1 / 1 / 3 / 3;
     width: 90%;
     height: 90%;
 }
 
-.content-img {
+.center-img {
     width: 90%;
     height: 80%;
     object-fit: cover;
 }
 
-.footer-menu {
-    margin-bottom: 200px;
-}
+/* Section Bottom ----------------------------------------------------------------------------------- */
 
-.footer-menu-title {
+.bottom-menu-title {
     font-size: 2rem;
     color: #333;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.footer-menu-grid {
+.bottom-menu-grid {
     display: grid;
     /* grid-template-columns: repeat(5, minmax(50px, 250px)); */
     grid-template-columns: repeat(auto-fit, 150px);
     justify-content: center;
 }
 
-.footer-menu-item-grid {
+.bottom-menu-item-grid {
     background-color: white;
     border: 1px solid #fb8c00;
     border-radius: 20px;
@@ -177,7 +185,7 @@ main {
     -o-border-radius: 20px;
 }
 
-.footer-menu-item-grid img {
+.bottom-menu-item-grid img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -185,21 +193,20 @@ main {
 
 
 @media only screen and (max-width: 768px) {
-    .header-info>h1 {
+    .top-info>h1 {
         font-size: 2rem;
     }
 
-    .container-h2 {
+    .top-h2 {
         font-size: 1rem;
     }
 
-    .header-info>p {
+    .top-info>p {
         font-size: 1rem;
     }
 
-    .content-grid {
+    .center-grid {
         grid-template-columns: repeat(auto-fit, minmax(75px, 15px));
         justify-content: center;
     }
-
 }

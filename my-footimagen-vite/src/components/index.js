@@ -1,4 +1,4 @@
-export * from './Header';
-export * from './Content';
+export * from './SectionTop';
+export * from './SectionCenter';
 export * from './Nav';
-export * from './Footer';
+export * from './SectionBottom';
