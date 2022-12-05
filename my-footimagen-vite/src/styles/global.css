@@ -257,10 +257,6 @@ main {
         justify-content: center;
     }
 
-    .container-nav {
-        grid-template-rows: 50px;
-    }
-
     .logo-name {
         font-size: 20px;
     }

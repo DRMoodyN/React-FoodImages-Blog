@@ -18,7 +18,7 @@ const Nav = () => {
 
             </p>
             <button onClick={onClickMode} className="nav-btn-mode btn-hover">
-                {(!modeDark) ? "Mode Dark" : "Mode Light"}
+                {(!modeDark) ? "Dark" : "Light"}
             </button>
         </nav>
     )
