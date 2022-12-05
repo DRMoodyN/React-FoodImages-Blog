@@ -1,4 +1,4 @@
-import { SectionTop, SectionCenter, Nav, SectionBottom } from '../components';
+import { SectionTop, SectionCenter, Nav, SectionBottom, SectionInfo } from '../components';
 import '../styles/global.css';
 
 const Layout = () => {
@@ -10,6 +10,7 @@ const Layout = () => {
                 <SectionTop />
                 <SectionCenter />
                 <SectionBottom />
+                {/* <SectionInfo /> */}
             </main>
         </>
     )
